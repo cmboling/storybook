@@ -1,0 +1,32 @@
+name: FOSSA
+on:
+  push:
+    branches: [ next ]
+  pull_request:
+    branches: [ next ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FOSSA_API_KEY: ${{secrets.FOSSA_API_KEY}}
+
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+  
+      - name: Download FOSSA
+        run: |
+          curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash
+          fossa --version
+ 
+      - name: List FOSSA targets
+        run: |
+          fossa list-targets
+          
+      - name: Run analysis
+        run: |
+          fossa analyze
