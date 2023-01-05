@@ -7,4 +7,3 @@ paths:
     - ./test-storybooks/server-kitchen-sink/
     - ./test-storybooks/external-docs/
     - ./test-storybooks/ember-cli/
-    - ./scripts/
