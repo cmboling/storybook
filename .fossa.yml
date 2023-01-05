@@ -1,0 +1,11 @@
+version: 3
+
+paths:
+  only:
+    - ./code
+    - ./code/lib/cli/src/js-package-manager/fixtures/multiple-lockfiles
+    - ./code/lib/cli/src/js-package-manager/fixtures/pnpm-workspace
+    - ./test-storybooks/ember-cli
+    - ./test-storybooks/server-kitchen-sink
+    - ./test-storybooks/standalone-preview
+    
