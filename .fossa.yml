@@ -3,7 +3,4 @@ version: 3
 paths:
   only:
     - ./code/lib/cli/src/js-package-manager/fixtures/multiple-lockfiles/
-    - ./test-storybooks/standalone-preview/
-    - ./test-storybooks/server-kitchen-sink/
-    - ./test-storybooks/external-docs/
-    - ./test-storybooks/ember-cli/
+
